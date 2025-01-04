@@ -1,0 +1,318 @@
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 0; /* Adjust if you want a little space from the top */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      height: 100%;
+    }
+
+    /* Section styling */
+    section {
+      padding-top: 8px;
+      margin-bottom: 4px;
+    }
+
+    .alternate-bg {
+      background-color: #f1f1f1;
+      width: 100%; /* Make the background stretch across the full width */
+      padding: 2px 0; /* Padding for the sections */
+    }
+
+    .container-resume {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    iframe {
+      width: 100%;
+      height: 800px;
+      border: none;
+    }
+
+  .biography-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .biography-section img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .contact-info {
+    flex: 1;
+    margin-left: 20px;
+  }
+
+  .contact-info h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+  }
+
+  .social-links a {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease; /* Add smooth transition for hover effect */
+    text-decoration: none; /* Remove underline */
+  }
+
+  .social-links a img {
+    width: 30px; /* Set the width */
+    height: 30px; /* Set the height */
+  }
+
+  .social-links a:hover img {
+    transform: scale(1.2); /* Apply hover scale to the icon */
+  }
+
+  .about-section {
+    margin-top: 20px;
+  }
+
+  .project-tile {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  .project-tile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .project-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 1rem;
+  }
+
+  .project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #222;
+  }
+
+  .project-description {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .project-link {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: auto;
+  }
+
+  .project-link:hover {
+    text-decoration: underline;
+  }
+
+  .project-card-container {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .project-content > div {
+    margin-right: 20px;
+  }
+
+  /* Navbar styles */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  /* Make the navbar stick to the top */
+  .sticky-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow effect */
+  }
+
+  /* Increase padding for the navbar items */
+  .navbar-nav .nav-item {
+    padding-right: 20px; /* Add space between each item */
+  }
+
+  /* Make navbar items space further from the right side */
+  .navbar-nav {
+    padding-right: 40px; /* Adjust this value as necessary */
+  }
+
+  /* Ensure the navbar toggler appears for small screens */
+  .navbar-toggler {
+    border: 1px solid #fff; /* Optional: adds a border around the toggler */
+  }
+
+  .navbar-toggler-icon {
+    background-color: #fff; /* Optional: makes the toggler icon visible */
+  }
+
+  /* Optional: Make navbar links spaced out more when collapsed */
+  @media (max-width: 992px) {
+    .navbar-nav {
+      padding-right: 10px;
+    }
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+  }
+
+  nav a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+  }
+
+  .navbar-toggler svg:hover {
+    fill: #007bff; /* Add a hover effect */
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none; /* Optional: To also remove any shadow effect */
+  }
+
+  #work-experience {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+  }
+
+  #work-experience {
+    background-color: transparent;
+    padding: 50px 0;
+  }
+
+  .timeline {
+    position: relative;
+    margin: 30px 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .timeline::before {
+  content: '';
+  position: absolute;
+  left: 22px; /* Align with the center of the dots */
+  top: 0;
+  bottom: 0;
+  width: 2px; /* Thickness of the line */
+  background: repeating-linear-gradient(
+    to bottom,
+    #007bff, /* Line color */
+    #007bff 5px,
+    transparent 5px,
+    transparent 10px
+  );
+  z-index: 1; /* Ensure it's behind the dots and cards */
+}
+
+  .timeline-item {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1; /* Ensure the dot is on top of the line */
+  }
+
+  .timeline-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #007bff; /* Hollow dot with a blue border */
+    border-radius: 50%;
+    background-color: transparent; /* Hollow inside */
+    z-index: 2; /* Ensure the dot is on top of the line */
+  }
+
+  .timeline-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  .timeline-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+  }
+
+  .timeline-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    z-index: 3; /* Ensure the dot is on top of the line */
+  }
+
+  .timeline-content p {
+    margin: 0;
+  }
+
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .timeline {
+      padding-left: 20px;
+    }
+
+    .timeline-item {
+      padding-left: 30px;
+    }
+
+    .timeline-content {
+      margin-left: 40px;
+    }
+  }
