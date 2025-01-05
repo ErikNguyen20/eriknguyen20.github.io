@@ -12,11 +12,18 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Include MathJax for LaTeX rendering -->
+  <script>
+    MathJax = {
+      options: {
+        enableMenu: false, // Disable the context menu
+      }
+    };
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Navbar (Content Loaded dynamically from javascript) -->
   <nav id="navbar-placeholder" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-navbar"></nav>
   <!-- Progress Bar at the Bottom of Navbar -->
   <div id="progress-bar-container" class="progress-bar-container">
@@ -46,9 +53,9 @@
             <img src="assets/icons/linkedin.svg" alt="Linkedin">
           </a>
           <!-- Google Scholar Icon -->
-<!--          <a href="https://scholar.google.com/citations?user=youruserID" target="_blank">-->
-<!--            <img src="assets/icons/google-scholar.svg" alt="Google Scholar">-->
-<!--          </a>-->
+          <a href="https://scholar.google.com/citations?user=I3iaAtgAAAAJ" target="_blank">
+            <img src="assets/icons/google-scholar.svg" alt="Google Scholar">
+          </a>
         </div>
       </div>
 
@@ -108,6 +115,7 @@
     <div class="container py-5" id="awards-container">
       <br>
       <h2><b>Honors & Awards</b></h2>
+      <br>
       <div id="awards-row">
         <!-- Awards will be dynamically loaded here -->
       </div>
@@ -117,7 +125,7 @@
   <!-- Footer -->
   <footer class="footer bg-dark text-white py-4">
   <div class="container text-center">
-    <p class="mb-0">Erik Nguyen | <a href="mailto:20nguyened@gmail.com">20nguyened@gmail.com</a></p>
+    <p class="mb-0">© 2025 Made by Erik Nguyen | <a href="mailto:20nguyened@gmail.com">20nguyened@gmail.com</a></p>
   </div>
   </footer>
 

@@ -292,7 +292,7 @@
   .timeline-subtitle {
     font-size: 1rem;
     font-weight: 600;
-    color: #666;
+    color: #585858;
     margin: 0;
   }
 
@@ -389,18 +389,16 @@ flex-direction: column;
       height: 4px; /* Fixed height */
       background-color: transparent;
       z-index: 1050; /* Ensure it's above the navbar */
-      margin-top: 56px; /* Adjust for navbar height */
+      margin-top: 56px; /* Adjust for navbar height 56px */
     }
 
     /* Style the progress bar itself */
     .progress-bar {
-      height: 4px; #4285f4
-      background-color: rgba(90, 170, 255, 0.7); /* Blue color with 70% opacity */
+      height: 4px;
+      background-color: rgba(30, 95, 255, 0.7); /* Blue color with 70% opacity */
       width: 0%; /* Start with 0% width */
       transition: width 0.1s ease; /* Smooth transition for width change */
     }
-
-
 
   .award-tile {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -459,7 +457,7 @@ flex-direction: column;
 
   .award-card-container {
     display: block;
-    margin-bottom: 1px;
+    margin-bottom: 2px;
   }
 
   .award-content > div {
