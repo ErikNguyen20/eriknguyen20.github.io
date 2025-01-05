@@ -61,7 +61,7 @@
     <!-- About Me -->
     <div class="about-section">
       <h3>About Me</h3>
-      <p>👋 Hello! My name is <b>Erik Nguyen</b>. I am currently a first-year master's student at <a href="https://ucsd.edu/">University of California, San Diego (UCSD)</a>, studying Computer Science with a focus on Artificial Intelligence. I received my B.S. in Computer Science at <a href="https://www.fullerton.edu/">California State University, Fullerton (CSUF)</a> in 2024.</p>
+      <p>👋 Hello! My name is <b>Erik Nguyen</b>. I am currently a first-year master's student at <a href="https://ucsd.edu/" target="_blank">University of California, San Diego (UCSD)</a>, studying Computer Science with a focus on Artificial Intelligence. I received my B.S. in Computer Science at <a href="https://www.fullerton.edu/" target="_blank">California State University, Fullerton (CSUF)</a> in 2024.</p>
       <p>I’m always open to messages, collaborations, or just a friendly chat, so feel free to reach out to me through <a href="mailto:20nguyened@gmail.com">email</a>!</p>
       <br>
       <p>\[ P(\text{dreaming in code 😴}) = \sum_{\substack{\text{Consecutive} \\ \text{days coding}}} \frac{\text{Number of late hours} + \text{Leetcode 😭}}{\text{Time spent touching grass} + \epsilon} \]</p>
@@ -103,6 +103,17 @@
     </div>
   </section>
 
+    <!-- Publications -->
+  <section id="awards" class="">
+    <div class="container py-5" id="awards-container">
+      <br>
+      <h2><b>Honors & Awards</b></h2>
+      <div id="awards-row">
+        <!-- Awards will be dynamically loaded here -->
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer bg-dark text-white py-4">
   <div class="container text-center">
@@ -129,6 +140,12 @@
       document.getElementById('timeline-container').innerHTML = experiencesHTML;
     }
 
+    async function loadAwards() {
+      const response = await fetch('awards.html');
+      const awardsHTML = await response.text();
+      document.getElementById('awards-row').innerHTML = awardsHTML;
+    }
+
     async function loadNavbar() {
       const response = await fetch('assets/navbar.html');
       const navbarHTML = await response.text();
@@ -141,6 +158,7 @@
       loadWorkExperiences();
       loadPublications();
       loadProjects();
+      loadAwards();
 
       // Wait for all dynamic content to finish loading
       Promise.all([
@@ -148,6 +166,7 @@
         loadWorkExperiences(),
         loadPublications(),
         loadProjects(),
+        loadAwards(),
       ]).then(() => {
         // Run MathJax after all content is loaded
         if (window.MathJax) {
