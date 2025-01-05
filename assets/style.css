@@ -394,8 +394,8 @@ flex-direction: column;
 
     /* Style the progress bar itself */
     .progress-bar {
-      height: 4px;
-      background-color: rgba(0, 123, 255, 0.7); /* Blue color with 70% opacity */
+      height: 4px; #4285f4
+      background-color: rgba(90, 170, 255, 0.7); /* Blue color with 70% opacity */
       width: 0%; /* Start with 0% width */
       transition: width 0.1s ease; /* Smooth transition for width change */
     }
@@ -465,3 +465,29 @@ flex-direction: column;
   .award-content > div {
     margin-right: 20px;
   }
+
+.skills-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap; /* Ensures skills wrap to the next line if needed */
+    gap: 0.5rem; /* Adds spacing between badges */
+}
+
+.skill-badge {
+    display: inline-block;
+    background-color: #007bff; /* Default background color */
+    color: #fff; /* Text color */
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px; /* Rounded corners for badges */
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.skill-badge:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+    transform: scale(1.1); /* Grows slightly on hover */
+}
