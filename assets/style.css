@@ -97,13 +97,14 @@
   .project-tile {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    align-items: center;
+    align-items: left;
     background: #fff;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 1.5rem;
     width: 100%;
+    flex-direction: column; /* ADDED JUST NOW */
   }
 
   .project-tile:hover {
@@ -113,16 +114,18 @@
 
   .project-image {
     width: 150px;
-    height: 150px;
     object-fit: cover;
     border-radius: 8px;
     margin-right: 1rem;
+
+    max-width: 100%;
+    height: auto;
   }
 
   .project-content {
     flex: 1;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* ADDED JUST NOW flex-direction: row; */
     align-items: center;
   }
 
@@ -157,6 +160,39 @@
   .project-content > div {
     margin-right: 20px;
   }
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .project-card-container {
+    margin-bottom: 15px;
+  }
+
+  .project-tile {
+    padding: 10px;
+    height: auto; /* Adjust height if needed */
+  }
+
+  .project-description {
+    padding-top: 10px;
+    font-size: 12px; /* Smaller font size */
+  }
+
+  .project-title {
+    font-size: 16px; /* Smaller title font */
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 12px; /* Smaller font size for skill badges */
+  }
+
+  .skill-badge {
+    padding: 5px 10px;
+    font-size: 12px; /* Smaller badge font */
+  }
+}
 
   /* Navbar styles */
   nav {
@@ -234,15 +270,14 @@
     background-color: transparent;
     padding: 50px 0;
   }
+.timeline {
+  position: relative;
+  margin: 30px 0;
+  padding: 0;
+  list-style-type: none;
+}
 
-  .timeline {
-    position: relative;
-    margin: 30px 0;
-    padding: 0;
-    list-style-type: none;
-  }
-
-  .timeline::before {
+.timeline::before {
   content: '';
   position: absolute;
   left: 22px; /* Align with the center of the dots */
@@ -259,42 +294,42 @@
   z-index: 1; /* Ensure it's behind the dots and cards */
 }
 
-  .timeline-item {
-    position: relative;
-    margin: 20px 0;
-    padding-left: 40px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1; /* Ensure the dot is on top of the line */
-  }
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1; /* Ensure the dot is on top of the line */
+}
 
-  .timeline-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+.timeline-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-  .timeline-dot {
-    position: absolute;
-    left: 15px;
-    top: 10px;
-    width: 15px;
-    height: 15px;
-    border: 3px solid #007bff; /* Hollow dot with a blue border */
-    border-radius: 50%;
-    background-color: transparent; /* Hollow inside */
-    z-index: 2; /* Ensure the dot is on top of the line */
-  }
+.timeline-dot {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #007bff; /* Hollow dot with a blue border */
+  border-radius: 50%;
+  background-color: transparent; /* Hollow inside */
+  z-index: 2; /* Ensure the dot is on top of the line */
+}
 
-  .timeline-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
+.timeline-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
 
-  .timeline-subtitle {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #585858;
-    margin: 0;
-  }
+.timeline-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #585858;
+  margin: 0;
+}
 
 .timeline-row {
   display: flex;
@@ -316,35 +351,84 @@
   color: rgba(0, 123, 255, 1.0); /* Blue color with 70% opacity */
 }
 
+.timeline-content {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  z-index: 3; /* Ensure the dot is on top of the line */
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-content p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .timeline {
+    padding-left: 15px; /* Reduce the padding on the left */
+  }
+
+  .timeline-item {
+    padding-left: 20px; /* Reduce padding for mobile view */
+    margin-bottom: 15px; /* Reduce space between items */
+  }
+
+  .timeline-dot {
+    width: 12px; /* Make the dot smaller */
+    height: 12px;
+    left: 2px; /* Adjust dot position */
+  }
+
   .timeline-content {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    z-index: 3; /* Ensure the dot is on top of the line */
-display: flex;
-flex-direction: column;
+    margin-left: 20px; /* Adjust content position */
+    padding: 10px; /* Reduce padding for mobile */
+  }
+
+  .timeline-title {
+    font-size: 1.1rem; /* Reduce title font size */
+  }
+
+  .timeline-subtitle {
+    font-size: 0.95rem; /* Slightly smaller subtitle font */
+  }
+
+  .timeline-location {
+    font-size: 0.95rem; /* Smaller location text */
+  }
+
+  .timeline-date {
+    font-size: 0.9rem; /* Reduce the size of the date */
   }
 
   .timeline-content p {
-    margin: 0;
+    font-size: 0.9rem; /* Smaller paragraph text for better readability */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .timeline-title {
+    font-size: 1rem; /* Further reduce title font size on very small screens */
   }
 
-  /* Responsive Design */
-  @media screen and (max-width: 768px) {
-    .timeline {
-      padding-left: 20px;
-    }
-
-    .timeline-item {
-      padding-left: 30px;
-    }
-
-    .timeline-content {
-      margin-left: 40px;
-    }
+  .timeline-subtitle {
+    font-size: 0.85rem; /* Further reduce subtitle font */
   }
+
+  .timeline-location,
+  .timeline-date {
+    font-size: 0.85rem; /* Further reduce text size */
+  }
+
+  .timeline-content {
+    margin-left: 25px; /* Reduce margin for very small screens */
+    padding: 8px; /* Further reduce padding */
+  }
+}
+
 
 .footer {
   position: relative;
