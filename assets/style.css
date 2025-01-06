@@ -489,3 +489,37 @@ flex-direction: column;
     background-color: #0056b3; /* Slightly darker blue on hover */
     transform: scale(1.1); /* Grows slightly on hover */
 }
+
+.biography-section img {
+  width: 100%; /* Ensures the image scales responsively */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 180px; /* Sets a maximum size for the image */
+  border-radius: 50%; /* Makes the image a circle */
+  object-fit: cover; /* Ensures the image fills the container properly */
+  aspect-ratio: 1 / 1; /* Forces the container to maintain a square shape */
+}
+
+@media (max-width: 576px) {
+  .biography-section img {
+    max-width: 140px; /* Slightly smaller size on mobile */
+  }
+}
+
+/* Special class for MathJax */
+.mathjax-container {
+  overflow-x: auto; /* Enables horizontal scrolling */
+  overflow-y: hidden; /* Prevents vertical scrolling */
+  min-height: 50px; /* Allow the div to grow based on content */
+}
+
+.mathjax-container p {
+  white-space: nowrap; /* Ensures the equation does not wrap */
+  margin: 0; /* Optional: removes any default margin */
+}
+
+/* For small screens (less than 768px), hide the GIF if it needs to wrap */
+@media (max-width: 767px) {
+  .biography-section .gif-container {
+    display: none; /* Hides the GIF when it overflows to the next line */
+  }
+}

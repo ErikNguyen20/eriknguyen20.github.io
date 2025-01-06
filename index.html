@@ -30,56 +30,66 @@
     <div id="progress-bar" class="progress-bar"></div>
   </div>
 
-  <!-- Biography Section -->
-  <section id="biography" class="container py-5">
-    <div class="biography-section">
-      <img src="assets/profilepic.jpg" alt="Profile Picture">
-      <div class="contact-info">
-        <h1><strong>Erik Nguyen</strong></h1>
-        <p><b>Email:</b> 20nguyened@gmail.com</p>
-        <p><b>University Email:</b> ern009@ucsd.edu</p>
-        <p><b>Phone:</b> (949) 702-9192</p>
-        <div class="social-links">
-          <!-- Email Icon -->
-          <a href="mailto:20nguyened@gmail.com" target="_blank">
-            <img src="assets/icons/email.svg" alt="Email">
-          </a>
-          <!-- GitHub Icon -->
-          <a href="https://github.com/ErikNguyen20" target="_blank">
-            <img src="assets/icons/github.svg" alt="Github">
-          </a>
-          <!-- LinkedIn Icon -->
-          <a href="https://www.linkedin.com/in/erik-nguyen20/" target="_blank">
-            <img src="assets/icons/linkedin.svg" alt="Linkedin">
-          </a>
-          <!-- Google Scholar Icon -->
-          <a href="https://scholar.google.com/citations?user=I3iaAtgAAAAJ" target="_blank">
-            <img src="assets/icons/google-scholar.svg" alt="Google Scholar">
-          </a>
-        </div>
-      </div>
+<section id="biography" class="container py-5">
+  <div class="row biography-section align-items-center justify-content-start">
+      <!-- Profile Picture -->
+  <div class="col-auto text-start">
+    <img src="assets/profilepic.jpg" alt="Profile Picture" class="img-fluid profile-picture">
+  </div>
 
-      <!-- Add the Totoro GIF image on the far right -->
-      <div class="gif-image">
-        <img id="seasonal-gif" src="assets/walking-gif.gif" alt="GIF" style="width: 300px; height: auto;">
+
+    <!-- Contact Info -->
+    <div class="col-9 col-md-6 mt-4 mt-md-0">
+      <h1><strong>Erik Nguyen</strong></h1>
+      <p><b>Email:</b> 20nguyened@gmail.com</p>
+      <p><b>University Email:</b> ern009@ucsd.edu</p>
+      <p><b>Phone:</b> (949) 702-9192</p>
+      <div class="d-flex social-links gap-3">
+        <a href="mailto:20nguyened@gmail.com" target="_blank">
+          <img src="assets/icons/email.svg" alt="Email" class="img-fluid" style="width: 32px;">
+        </a>
+        <a href="https://github.com/ErikNguyen20" target="_blank">
+          <img src="assets/icons/github.svg" alt="Github" class="img-fluid" style="width: 32px;">
+        </a>
+        <a href="https://www.linkedin.com/in/erik-nguyen20/" target="_blank">
+          <img src="assets/icons/linkedin.svg" alt="Linkedin" class="img-fluid" style="width: 32px;">
+        </a>
+        <a href="https://scholar.google.com/citations?user=I3iaAtgAAAAJ" target="_blank">
+          <img src="assets/icons/google-scholar.svg" alt="Google Scholar" class="img-fluid" style="width: 32px;">
+        </a>
       </div>
     </div>
 
-    <!-- About Me -->
-    <div class="about-section">
-      <h3>About Me</h3>
-      <p>👋 Hello! My name is <b>Erik Nguyen</b>. I am currently a first-year master's student at <a href="https://ucsd.edu/" target="_blank">University of California, San Diego (UCSD)</a>, studying Computer Science with a focus on Artificial Intelligence. I received my B.S. in Computer Science at <a href="https://www.fullerton.edu/" target="_blank">California State University, Fullerton (CSUF)</a> in 2024.</p>
-      <p>I’m always open to messages, collaborations, or just a friendly chat, so feel free to reach out to me through <a href="mailto:20nguyened@gmail.com">email</a>!</p>
-      <br>
+    <!-- GIF Image -->
+    <div class="col-12 col-md-4 text-center text-md-end mt-4 mt-md-0 gif-container">
+      <img id="seasonal-gif" src="assets/walking-gif.gif" alt="GIF" class="img-fluid">
+    </div>
+  </div>
+
+  <!-- About Me -->
+  <div class="about-section mt-5">
+    <h3>About Me</h3>
+    <p>👋 Hello! My name is <b>Erik Nguyen</b>. I am currently a first-year master's student at
+      <a href="https://ucsd.edu/" target="_blank">University of California, San Diego (UCSD)</a>, studying Computer Science with a focus on Artificial Intelligence.
+      I received my B.S. in Computer Science at <a href="https://www.fullerton.edu/" target="_blank">California State University, Fullerton (CSUF)</a> in 2024.
+    </p>
+    <p>I’m always open to messages, collaborations, or just a friendly chat, so feel free to reach out to me through
+      <a href="mailto:20nguyened@gmail.com">email</a>!
+    </p>
+    <br>
+    <!-- Scalable MathJax Equation -->
+    <div class="overflow-y-hidden w-100 mathjax-container">
       <p>\[ P(\text{dreaming of code 😴}) = \sum_{\substack{\text{Consecutive} \\ \text{days coding}}} \frac{\text{Number of late hours} + \text{Leetcode 😭}}{\text{Time spent touching grass} + \epsilon} \]</p>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Experience -->
   <section id="experiences" class="alternate-bg">
   <div class="container py-5" id="work-experience">
     <br>
-    <h2><b>Experience</b></h2>
+    <h2 class="ps-2"><b>Experience</b></h2>
     <div class="timeline" id="timeline-container">
         <!-- Work Experiences will be dynamically loaded here -->
     </div>
