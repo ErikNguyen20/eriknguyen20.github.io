@@ -174,23 +174,42 @@
 
   .project-description {
     padding-top: 10px;
-    font-size: 12px; /* Smaller font size */
+    font-size: 14px; /* Smaller font size */
   }
 
   .project-title {
     font-size: 16px; /* Smaller title font */
   }
 
+  .project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* ADDED JUST NOW flex-direction: row; */
+    align-items: center;
+  }
+
   .skills-list {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    font-size: 12px; /* Smaller font size for skill badges */
+    font-size: 10px; /* Smaller font size for skill badges */
   }
 
   .skill-badge {
     padding: 5px 10px;
-    font-size: 12px; /* Smaller badge font */
+    font-size: 10px; /* Smaller badge font */
+  }
+
+  .award-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+    color: #222;
+  }
+
+  .award-description {
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
   }
 }
 
@@ -424,7 +443,7 @@
   }
 
   .timeline-content {
-    margin-left: 25px; /* Reduce margin for very small screens */
+    margin-left: 5px; /* Reduce margin for very small screens */
     padding: 8px; /* Further reduce padding */
   }
 }
@@ -602,8 +621,44 @@
 }
 
 /* For small screens (less than 768px), hide the GIF if it needs to wrap */
-@media (max-width: 767px) {
+@media (max-width: 1400px) {
   .biography-section .gif-container {
     display: none; /* Hides the GIF when it overflows to the next line */
+  }
+  .centered-image {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .mathjax-container p {
+    font-size: 0.9em; /* Smaller font size for mobile */
+    transform: scale(0.8); /* Optionally scale down further */
+    transform-origin: left top; /* Ensure scaling looks natural */
+  }
+}
+@media (max-width: 480px) {
+  .mathjax-container p {
+    font-size: 0.8em; /* Smaller font size for mobile */
+    transform: scale(0.7); /* Optionally scale down further */
+    transform-origin: left top; /* Ensure scaling looks natural */
+  }
+
+  .award-title {
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin: 0;
+    color: #222;
+  }
+
+  .award-description {
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+  }
+}
+@media (max-width: 375px) {
+  .mathjax-container p {
+    font-size: 0.77em; /* Smaller font size for mobile */
+    transform: scale(0.67); /* Optionally scale down further */
+    transform-origin: left top; /* Ensure scaling looks natural */
   }
 }
