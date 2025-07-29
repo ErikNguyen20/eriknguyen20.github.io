@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<a class="navbar-brand" href="/">Home</a>
+<a class="navbar-brand" href="/#"><b>Home</b></a>
 <button
       class="navbar-toggler"
       type="button"
@@ -23,7 +23,17 @@
       <a class="nav-link" href="/#projects">Projects</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="cv.html"><b>CV</b></a>
+      <a class="nav-link cv-highlight" href="cv.html"><b>Resume PDF</b></a>
+    </li>
+    <li class="nav-item d-none d-lg-flex align-items-center">
+      <button id="theme-toggle" class="btn btn-link nav-link p-0" aria-label="Toggle dark mode">
+        <img id="theme-icon" src="assets/icons/moon.svg" alt="Toggle Theme" width="24" height="24">
+      </button>
     </li>
   </ul>
+</div>
+
+<!-- Progress Bar at the Bottom of Navbar -->
+<div id="progress-bar-container" class="progress-bar-container">
+  <div id="progress-bar" class="progress-bar"></div>
 </div>

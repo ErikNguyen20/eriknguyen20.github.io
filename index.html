@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y9F690V91P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y9F690V91P');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Erik Nguyen's Website</title>
   <!-- For standard desktop browsers -->
   <link rel="icon" href="assets/icons/icon-png.png" type="image/png" sizes="32x32">
 
+  <!-- Setting styling/css -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/style.css" rel="stylesheet" type="text/css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <!-- Include MathJax for LaTeX rendering -->
   <script>
@@ -20,74 +32,79 @@
     };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+  <!-- Get theme -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+    })();
+  </script>
 </head>
 <body>
 
   <!-- Navbar (Content Loaded dynamically from javascript) -->
   <nav id="navbar-placeholder" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-navbar"></nav>
-  <!-- Progress Bar at the Bottom of Navbar -->
-  <div id="progress-bar-container" class="progress-bar-container">
-    <div id="progress-bar" class="progress-bar"></div>
-  </div>
 
-<section id="biography" class="container py-5">
-  <div class="row biography-section align-items-center justify-content-start">
-      <!-- Profile Picture -->
-  <div class="col-auto text-start">
-    <img src="assets/profilepic.jpg" alt="Profile Picture" class="img-fluid profile-picture">
-  </div>
+  <!-- Biography Section -->
+  <section id="biography" class="container py-5 reveal">
+    <div class="row biography-section align-items-center justify-content-start">
+        <!-- Profile Picture -->
+    <div class="col-auto text-start">
+      <img src="assets/profilepic.jpg" alt="Profile Picture" class="img-fluid profile-picture">
+    </div>
 
 
-    <!-- Contact Info -->
-    <div class="col-9 col-md-6 mt-4 mt-md-0">
-      <h1><strong>Erik Nguyen</strong></h1>
-      <p><b>Email:</b> 20nguyened@gmail.com</p>
-      <p><b>University Email:</b> ern009@ucsd.edu</p>
-      <p><b>Phone:</b> (949) 702-9192</p>
-      <div class="d-flex social-links gap-3">
-        <a href="mailto:20nguyened@gmail.com" target="_blank">
-          <img src="assets/icons/email.svg" alt="Email" class="img-fluid" style="width: 32px;">
-        </a>
-        <a href="https://github.com/ErikNguyen20" target="_blank">
-          <img src="assets/icons/github.svg" alt="Github" class="img-fluid" style="width: 32px;">
-        </a>
-        <a href="https://www.linkedin.com/in/erik-nguyen20/" target="_blank">
-          <img src="assets/icons/linkedin.svg" alt="Linkedin" class="img-fluid" style="width: 32px;">
-        </a>
-        <a href="https://scholar.google.com/citations?user=I3iaAtgAAAAJ" target="_blank">
-          <img src="assets/icons/google-scholar.svg" alt="Google Scholar" class="img-fluid" style="width: 32px;">
-        </a>
+      <!-- Contact Info -->
+      <div class="col-9 col-md-6 mt-4 mt-md-0">
+        <h1><strong>Erik Nguyen</strong></h1>
+        <p><b>Email:</b> 20nguyened@gmail.com</p>
+        <p><b>University Email:</b> ern009@ucsd.edu</p>
+        <p><b>Phone:</b> (949) 702-9192</p>
+        <div class="d-flex social-links gap-2">
+          <a href="mailto:20nguyened@gmail.com" target="_blank">
+            <img src="assets/icons/email.svg" alt="Email" class="img-fluid" style="width: 32px;">
+          </a>
+          <a href="https://github.com/ErikNguyen20" target="_blank">
+            <img src="assets/icons/github.svg" alt="Github" class="img-fluid" style="width: 32px;">
+          </a>
+          <a href="https://www.linkedin.com/in/erik-nguyen20/" target="_blank">
+            <img src="assets/icons/linkedin.svg" alt="Linkedin" class="img-fluid" style="width: 32px;">
+          </a>
+          <a href="https://scholar.google.com/citations?user=I3iaAtgAAAAJ" target="_blank">
+            <img src="assets/icons/google-scholar.svg" alt="Google Scholar" class="img-fluid" style="width: 32px;">
+          </a>
+        </div>
+      </div>
+
+      <!-- GIF Image -->
+      <div class="col-12 col-md-4 text-center text-md-end mt-4 mt-md-0 gif-container">
+        <img id="seasonal-gif" src="assets/walking-gif.gif" alt="GIF" class="img-fluid">
       </div>
     </div>
 
-    <!-- GIF Image -->
-    <div class="col-12 col-md-4 text-center text-md-end mt-4 mt-md-0 gif-container">
-      <img id="seasonal-gif" src="assets/walking-gif.gif" alt="GIF" class="img-fluid">
+    <!-- About Me -->
+    <div class="about-section mt-5">
+      <h3>About Me</h3>
+      <p>👋 Hello! My name is Erik Nguyen. I am currently a second-year master's student at
+        <a href="https://ucsd.edu/" target="_blank">University of California, San Diego (UCSD)</a>, studying Computer Science with a focus on Artificial Intelligence.
+        I received my B.S. in Computer Science at <a href="https://www.fullerton.edu/" target="_blank">California State University, Fullerton (CSUF)</a> in 2024.
+      </p>
+      <p>I’m always open to messages, collaborations, or just a friendly chat, so feel free to reach out to me through
+        <a href="mailto:20nguyened@gmail.com">Email</a> or <a href="https://www.linkedin.com/in/erik-nguyen20/" target="_blank">LinkedIn</a>!
+      </p>
+      <br>
+      <!-- Scalable MathJax Equation -->
+      <div class="overflow-y-hidden w-100 mathjax-container">
+        <p>\[ P(\text{dreaming of code 😴}) \propto \sum_{\substack{\text{Consecutive} \\ \text{days coding}}} \frac{\text{Number of late hours} + \text{Leetcode 😭}}{\text{Time spent touching grass} + \epsilon} \]</p>
+      </div>
     </div>
-  </div>
-
-  <!-- About Me -->
-  <div class="about-section mt-5">
-    <h3>About Me</h3>
-    <p>👋 Hello! My name is <b>Erik Nguyen</b>. I am currently a second-year master's student at
-      <a href="https://ucsd.edu/" target="_blank">University of California, San Diego (UCSD)</a>, studying Computer Science with a focus on Artificial Intelligence.
-      I received my B.S. in Computer Science at <a href="https://www.fullerton.edu/" target="_blank">California State University, Fullerton (CSUF)</a> in 2024.
-    </p>
-    <p>I’m always open to messages, collaborations, or just a friendly chat, so feel free to reach out to me through
-      <a href="mailto:20nguyened@gmail.com">Email</a> or <a href="https://www.linkedin.com/in/erik-nguyen20/" target="_blank">LinkedIn</a>!
-    </p>
-    <br>
-    <!-- Scalable MathJax Equation -->
-    <div class="overflow-y-hidden w-100 mathjax-container">
-      <p>\[ P(\text{dreaming of code 😴}) \propto \sum_{\substack{\text{Consecutive} \\ \text{days coding}}} \frac{\text{Number of late hours} + \text{Leetcode 😭}}{\text{Time spent touching grass} + \epsilon} \]</p>
-    </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- Experience -->
-  <section id="experiences" class="alternate-bg">
-  <div class="container py-5" id="work-experience">
+  <section id="experiences" class="alternate-bg reveal">
+  <div class="container py-5 px-3" id="work-experience">
     <br>
     <h2 class="ps-2"><b>Experience</b></h2>
     <div class="timeline" id="timeline-container">
@@ -97,8 +114,8 @@
   </section>
 
   <!-- Publications -->
-  <section id="publications" class="">
-    <div class="container py-5" id="publications-container">
+  <section id="publications" class="reveal">
+    <div class="container py-5 px-3" id="publications-container">
       <br>
       <h2><b>Publications</b></h2>
       <p><b>*</b><em> means poster presentation</em></p>
@@ -109,8 +126,8 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="alternate-bg">
-    <div class="container py-5" id="projects-container default-bg">
+  <section id="projects" class="alternate-bg reveal">
+    <div class="container py-5 px-3" id="projects-container default-bg">
       <br>
       <h2><b>Projects</b></h2>
       <br>
@@ -120,9 +137,9 @@
     </div>
   </section>
 
-    <!-- Publications -->
-  <section id="awards" class="">
-    <div class="container py-5" id="awards-container">
+    <!-- Awards -->
+  <section id="awards" class="reveal">
+    <div class="container py-5 px-3" id="awards-container">
       <br>
       <h2><b>Honors & Awards</b></h2>
       <br>
@@ -135,90 +152,17 @@
   <!-- Footer -->
   <footer class="footer bg-dark text-white py-4">
   <div class="container text-center">
-    <p class="mb-0">© 2025 Made by Erik Nguyen | <a href="mailto:20nguyened@gmail.com">20nguyened@gmail.com</a></p>
+    <p class="mb-0 custom-footer-text">© 2025 Made by Erik Nguyen | <a href="mailto:20nguyened@gmail.com">20nguyened@gmail.com</a></p>
   </div>
   </footer>
 
-  <script>
-    async function loadPublications() {
-      const response = await fetch('publications.html');
-      const publicationsHTML = await response.text();
-      document.getElementById('publications-row').innerHTML = publicationsHTML;
-    }
-
-    async function loadProjects() {
-      const response = await fetch('projects.html');
-      const projectsHTML = await response.text();
-      document.getElementById('projects-row').innerHTML = projectsHTML;
-    }
-
-    async function loadWorkExperiences() {
-      const response = await fetch('work_experiences.html');
-      const experiencesHTML = await response.text();
-      document.getElementById('timeline-container').innerHTML = experiencesHTML;
-    }
-
-    async function loadAwards() {
-      const response = await fetch('awards.html');
-      const awardsHTML = await response.text();
-      document.getElementById('awards-row').innerHTML = awardsHTML;
-    }
-
-    async function loadNavbar() {
-      const response = await fetch('assets/navbar.html');
-      const navbarHTML = await response.text();
-      document.getElementById('navbar-placeholder').innerHTML = navbarHTML;
-    }
-
-    // Load Page Content
-    document.addEventListener('DOMContentLoaded', () => {
-      loadNavbar();
-      loadWorkExperiences();
-      loadPublications();
-      loadProjects();
-      loadAwards();
-
-      // Wait for all dynamic content to finish loading
-      Promise.all([
-        loadNavbar(),
-        loadWorkExperiences(),
-        loadPublications(),
-        loadProjects(),
-        loadAwards(),
-      ]).then(() => {
-        // Run MathJax after all content is loaded
-        if (window.MathJax) {
-          MathJax.typeset(); // Re-render MathJax after content is dynamically added
-        } else {
-          console.error("MathJax is not loaded");
-        }
-      });
-    });
-
-    // Get the current month (0 = January, 11 = December)
-    const currentMonth = new Date().getMonth();
-
-    // Get the GIF element
-    const gifImage = document.getElementById('seasonal-gif');
-
-    // Check if it's December (Month 11)
-    if (currentMonth === 11 || currentMonth === 10 || currentMonth === 0) {
-      gifImage.src = "assets/christmas-walking-gif.gif";  // Set December GIF
-    } else {
-      gifImage.src = "assets/walking-gif.gif";  // Set default GIF
-    }
-
-    window.addEventListener('scroll', () => {
-      const progressBar = document.getElementById('progress-bar');
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrolled = window.scrollY;
-      const scrollPercentage = (scrolled / totalHeight) * 100;
-
-      // Update the width of the progress bar
-      progressBar.style.width = `${scrollPercentage}%`;
-      // const progressBarContainer = document.querySelector('.progress-bar-container');
-      // progressBarContainer.style.height = '5px'; // You can change this value to whatever height you prefer
+  <!-- Important Script that runs everything -->
+  <script src="assets/main.js" defer></script>
+  <script defer>
+    window.addEventListener('DOMContentLoaded', () => {
+      window.main_index(); // Uses the function associated with index.html
     });
   </script>
+
 </body>
 </html>
