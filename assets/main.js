@@ -66,38 +66,35 @@ function setSeasonGif() {
     if (currentMonth === 11 || currentMonth === 10 || currentMonth === 0) {
         gifImage.src = "assets/christmas-walking-gif.gif";  // Set December GIF
     } else {
-        // gifImage.src = "assets/walking-gif.gif";  // Set default GIF
-        gifImage.src = "assets/christmas-walking-gif.gif";
+        gifImage.src = "assets/walking-gif.gif";  // Set default GIF
     }
 }
 
 function applyThemeIcon(theme) {
-  const icon = document.getElementById('theme-icon');
-  if (icon) {
-    icon.src = theme === 'dark' ? 'assets/icons/sun-fill.svg' : 'assets/icons/moon.svg';
-    icon.alt = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
-  }
+    const icon = document.getElementById('theme-icon');
+    if (icon) {
+        icon.src = theme === 'dark' ? 'assets/icons/sun-fill.svg' : 'assets/icons/moon.svg';
+        icon.alt = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+    }
 }
 
 function updateTotoroImage(theme) {
-  const img = document.getElementById('totoro-img');
-  if (img) {
-    img.src = theme === 'dark'
-      ? 'assets/studiototoro_dark.png'
-      : 'assets/studiototoro_light.png';
-  }
+    const img = document.getElementById('totoro-img');
+    if (img) {
+        img.src = theme === 'dark'
+            ? 'assets/studiototoro_dark.png' : 'assets/studiototoro_light.png';
+    }
 }
 
 
 function toggleTheme() {
-  console.log("TOGGLE THEME BUTTON CLICKED")
-  const html = document.documentElement;
-  const current = html.getAttribute('data-bs-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  html.setAttribute('data-bs-theme', next);
-  localStorage.setItem('theme', next);
-  applyThemeIcon(next);
-  updateTotoroImage(next);
+    const html = document.documentElement;
+    const current = html.getAttribute('data-bs-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-bs-theme', next);
+    localStorage.setItem('theme', next);
+    applyThemeIcon(next);
+    updateTotoroImage(next);
 }
 
 
