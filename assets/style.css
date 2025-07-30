@@ -730,6 +730,20 @@
   transform: translateY(0);
 }
 
+#cvFileViewer {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  border: none;
+  pointer-events: none; /* Prevent interaction while hidden */
+}
+
+#cvFileViewer.fade-in {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
 
 /* === Dark Theme === */
 [data-bs-theme="dark"] body {
@@ -740,8 +754,7 @@
 [data-bs-theme="dark"] .alternate-bg,
 [data-bs-theme="dark"] .timeline-content,
 [data-bs-theme="dark"] .project-tile,
-[data-bs-theme="dark"] .award-tile,
-[data-bs-theme="dark"] .container-resume {
+[data-bs-theme="dark"] .award-tile {
   background-color: #1e1e1e;
   color: #e0e0e0;
   box-shadow: 0 3px 6px rgba(255, 255, 255, 0.1); /* Updated */

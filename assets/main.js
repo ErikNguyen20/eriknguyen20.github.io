@@ -81,8 +81,23 @@ function applyThemeIcon(theme) {
 function updateTotoroImage(theme) {
     const img = document.getElementById('totoro-img');
     if (img) {
-        img.src = theme === 'dark'
-            ? 'assets/studiototoro_dark.png' : 'assets/studiototoro_light.png';
+        img.src = theme === 'dark' ? 'assets/studiototoro_dark.png' : 'assets/studiototoro_light.png';
+    }
+}
+
+
+function setCVFile() {
+    const fileName = "ErikNguyenResume.pdf";
+    const today = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+    const fileUrl = `${fileName}?v=${today}`;
+    const fileView = document.getElementById('cvFileViewer')
+    if (fileView) {
+        fileView.src = fileUrl;
+
+        // Wait until the iframe finishes loading to fade it in
+        fileView.onload = () => {
+            fileView.classList.add("fade-in");
+        };
     }
 }
 
@@ -94,7 +109,7 @@ function toggleTheme() {
     html.setAttribute('data-bs-theme', next);
     localStorage.setItem('theme', next);
     applyThemeIcon(next);
-    updateTotoroImage(next);
+    // updateTotoroImage(next);
 }
 
 
@@ -152,9 +167,11 @@ function main_cv() {
             toggleBtn.addEventListener('click', toggleTheme);
             const savedTheme = localStorage.getItem('theme') || 'dark';
             applyThemeIcon(savedTheme);
-            updateTotoroImage(savedTheme);
+            // updateTotoroImage(savedTheme);
         }
     });
+
+    setCVFile()
 }
 
 
