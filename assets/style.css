@@ -177,6 +177,24 @@
 
 /* Mobile view adjustments */
 @media (max-width: 768px) {
+  .biography-section {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .biography-section .col-auto,
+  .biography-section .col-9,
+  .biography-section .col-md-6 {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
   .project-card-container {
     margin-bottom: 15px;
   }
@@ -188,11 +206,11 @@
 
   .project-description {
     padding-top: 10px;
-    font-size: 14px; /* Smaller font size */
+    font-size: 12px; /* Smaller font size */
   }
 
   .project-title {
-    font-size: 16px; /* Smaller title font */
+    font-size: 15px; /* Smaller title font */
   }
 
   .project-content {
@@ -349,7 +367,7 @@
   left: 22px; /* Align with the center of the dots */
   top: 0;
   bottom: 0;
-  width: 2px; /* Thickness of the line */
+  width: 3px; /* Thickness of the line */
   background: repeating-linear-gradient(
     to bottom,
     #007bff, /* Line color */
@@ -455,23 +473,23 @@
   }
 
   .timeline-title {
-    font-size: 1.1rem; /* Reduce title font size */
+    font-size: 1rem; /* Reduce title font size */
   }
 
   .timeline-subtitle {
-    font-size: 0.95rem; /* Slightly smaller subtitle font */
+    font-size: 0.8rem; /* Slightly smaller subtitle font */
   }
 
   .timeline-location {
-    font-size: 0.95rem; /* Smaller location text */
+    font-size: 0.85rem; /* Smaller location text */
   }
 
   .timeline-date {
-    font-size: 0.9rem; /* Reduce the size of the date */
+    font-size: 0.8rem; /* Reduce the size of the date */
   }
 
   .timeline-content p {
-    font-size: 0.9rem; /* Smaller paragraph text for better readability */
+    font-size: 0.8rem; /* Smaller paragraph text for better readability */
   }
 }
 
